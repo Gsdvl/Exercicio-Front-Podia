@@ -1,0 +1,45 @@
+Q1.Por quê você escolheu este design e não os demais que estavam disponíveis pra escolha?
+
+    Principalmente porque a primeira vista ele era o design de nível 2 que me parecia mais simples de ser implementado.
+
+
+Q2.Quais fontes de informação você usou para chegar na sua solução (vale código disponível no github, tutoriais, google, chatgpt)?
+
+    Majoritariamente a documentação de css para pesquisar os parametros que podem ser alterados, e o chatgpt para me ajudar a debugar e corrigir problemas
+    com os quais eu estava tendo dificuldade em lidar
+
+Q3.Quais as dificuldades que você teve para imitar o design original? Enumere com exemplos reais de código.
+
+    As principais dificuldades envolviam as margens, e a inserção de ícones:
+    
+    A separação da margem, em que a parte príncipal do texto possui margens para se concentrar no centro da tela, e a parte debaixo é um rodapé que ocupa
+    a tela inteira, foram complicados de se lidar, e a solução envolveu separação da estrutura em 2 divs, e corrigir problemas de identação
+
+    .main-block {
+    margin-left: 300px;
+    margin-right: 300px;
+    }
+
+    .footer {
+    margin-top: 100px;
+    background-color: #6C5B89;
+    padding-top: 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+    color: #A8A8B0;
+    position: relative;
+    bottom: 0;
+    }
+
+    Também tive dificuldade quanto a inserção de ícones e originalmente estava procurando imagens no google que frequentemente estavam com baixa qualidade
+    e não condiziam com o projeto original, além de que em outros casos, para outros ícones, eu estava utilizando caracteres similares mas não exatamente iguais
+    ao projeto. Para tal, utilizei o boxicons, para inserir de forma manual em alguns lugares, e em outros, baixar a imagem para ter ela padronizada
+    Eles foram inseridos com:
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+
+    <div class="features">Features <box-icon name="chevron-down" color="#000" size="18px"></box-icon></div>
+    <div class="resources">Resources <box-icon name="chevron-down" color="#000" size="18px"></box-icon></div>
+
+    <div class="question-ball">
+        <box-icon name='help-circle'></box-icon>
+    </div>
